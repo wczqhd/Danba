@@ -1,0 +1,11 @@
+<view class="loading">
+
+<!--<text>请授权使用您的微信头像，昵称 ：）</text>-->
+
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
+<!--	 <loading hidden="{{hidden}}">
+    加载中...
+  </loading>-->
+
+</view>

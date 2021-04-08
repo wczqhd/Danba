@@ -1,0 +1,10 @@
+{
+
+"usingComponents": {
+"audio-msg": "../../comps/chat/msglist/type/audioSimple/audio",
+"chat-suit-audio": "../../comps/chat/inputbar/suit/audioSimple/audioSimple"
+
+
+
+}
+}

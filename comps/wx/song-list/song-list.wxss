@@ -1,0 +1,125 @@
+.song-list .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 64px;
+    font-size: 14px;
+}
+.song-list .item .content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 20px;
+    overflow: hidden;
+}
+.song-list .item .content .name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+}
+.song-list .item .content .desc {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 4px;
+    color: rgba(255,255,255,0.3);
+}
+
+.self .avatar {
+	float: right;
+	margin: 0 0 0 20rpx;
+}
+
+.user {
+	position: relative;
+	bottom: -30rpx;
+}
+
+.self .msg {
+	background-color: #0873DE;
+	color: #fff;
+}
+
+.self .msg:before {
+	right: inherit;
+	left: 100%;
+	border-right-color: transparent;
+	border-left-color: #b2e281;
+}
+.self {
+	text-align: right;
+}
+
+.user .user-text {
+	margin: auto 100rpx 8rpx;
+	font-size: 30rpx;
+	color: #dcdcdc;
+	display: block;
+}
+
+.avatar {
+	width: 72rpx;
+	height: 72rpx;
+	margin: 0 20rpx 0 0;
+	border-radius: 6rpx;
+	float: left;
+}
+
+.msg {
+	display: inline-block;
+	padding: 20rpx;
+	max-width: calc(85% - 80rpx);
+	min-height: 40rpx; 
+	font-size: 24rpx;
+	/*overflow: hidden;*/
+	text-align: left;
+	word-break: break-all;
+	background-color: #fff;
+	border-radius: 26rpx;
+	position: relative;
+	margin-top: 24rpx;
+}
+
+.msg .msg_poprightarrow {
+	position: absolute;
+	right: -10rpx;
+	height: 18rpx;
+	width: 18rpx;
+	margin-top: -10rpx;
+}
+
+.msg .msg_popleftarrow{
+	position:absolute;
+	left: -14rpx;
+	height: 18rpx;
+	width: 18rpx;
+	margin-top: -10rpx;
+}
+
+.msg .msg-text {
+	line-height: 40rpx;
+	font-size: 32rpx;
+	margin: 0;
+}
+
+/*.msg:before {
+	content: " ";
+	position: absolute;
+	top: 9px;
+	right: 100%;
+	border: 6px solid transparent;
+	border-right-color: #EDEDED;
+}*/
+
+.self {
+	text-align: right;
+}
+.template {
+	display: inline;
+}

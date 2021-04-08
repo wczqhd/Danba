@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "song-list": "../song-list/song-list",
+    "chat-msglist": "../../chat/msglist/msglist",
+    "loading": "../loading/loading",
+    "chat-inputbar": "../../chat/inputbar/inputbar",
+    "chat-suit-audio": "../../chat/inputbar/suit/audio/audio"
+  }
+}

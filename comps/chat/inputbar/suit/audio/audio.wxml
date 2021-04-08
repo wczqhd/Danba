@@ -1,0 +1,60 @@
+<!--<view wx:if="{{ recordStatus != RecordStatus.HIDE }}" class="modal modal-record" bind:tap="toggleRecordModal">
+	<view class="modal-body" catch:tap="toggleWithoutAction">-->
+<view class="cu-modal {{recordStatus != RecordStatus.HIDE ?'show':''}}"  bind:tap="toggleRecordModal">
+  <view class="cu-dialog" catch:tap="toggleWithoutAction">
+    <view class="cu-card dynamic {{isCard?'no-card':''}}">
+      <view class="cu-item shadow">
+        <view class="cu-list menu-avatar">
+          <view class="cu-item">
+
+
+          </view>
+        </view>
+        <view class="text-content">
+          {{name}}
+        </view>
+        <view class="text-content">
+          {{Describe}}
+        </view>
+        <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}"   wx:if="{{RecordImage != '11'}}">
+          <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url({{RecordImage}});" wx:for="{{isCard?9:1}}" wx:key="index">
+          </view>
+        </view>
+        <view class="bg-white">
+
+          <view class="flex solid-bottom padding justify-center">
+            <!--<view class="bg-grey padding-sm margin-xs radius">center</view>-->
+            <view class='sound-waves'>
+              <view wx:for="{{radomheight}}" wx:key="item" style='height:{{item}}rpx;margin-top:-{{item/2}}rpx'></view>
+              <view style='clear:both;width:0;height:0;'></view>
+            </view>
+
+          </view>
+          <view class="flex solid-bottom padding justify-center">
+            <!--<view class="bg-grey padding-sm margin-xs radius">center</view>-->
+            <text class="desc">{{ RecordDesc[recordStatus] }}</text>
+
+          </view>
+          <view class="flex solid-bottom padding justify-center">
+            <!--<view class="bg-grey padding-sm margin-xs radius">center</view>-->
+            <view class="cu-avatar xl round bg-green cuIcon-voice"
+            catch:touchstart="handleRecording"
+               catch:touchmove="handleRecordingMove"
+               catch:touchend="handleRecordingCancel"
+               catch:touchcancel="handleRecordingCancel"></view>
+
+          </view>
+
+        </view>
+
+
+
+
+
+      </view>
+    </view>
+
+
+
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view>
+<!--  <music-list  id="music-list"   username="{{ username }}"></music-list>-->
+<chat
+	id="groupchat"
+	username="{{ username }}"
+	groupId="{{ groupid }}"
+	chatType="chatRoom"></chat>
+</view>

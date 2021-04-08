@@ -1,0 +1,31 @@
+page{
+  
+  background:rgba(34, 34, 34, 0.192);
+}
+.userinfo-wrapper {
+    position: absolute;
+    margin: auto;
+    width: 128rpx;
+    height: 128rpx;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
+}
+.loading button {
+flex: 1;
+	height: 100rpx;
+	margin: 256rpx 64rpx 0;
+	border-radius: 8rpx;
+	line-height: 96rpx;
+	color: rgb(255,255,255);
+	background-color: rgba(27, 192, 55, 0.726);
+	font-size: 34rpx;
+}

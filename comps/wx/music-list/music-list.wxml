@@ -1,0 +1,49 @@
+<view class="music-list">
+	<chat-suit-audio
+		id="chat-suit-audio"
+		username="{{ username }}"
+		chatType="{{ chatType }}"
+		bind:newAudioMsg="saveSendMsg"></chat-suit-audio>
+    
+  <view class="title" v-html="title"></view>
+ <view class="bg-image" wx:if="{{bshowImage}}" style="{{bgStyle}};transform:{{scale}};z-index: {{bgZindex}}" id="bgImage" >
+
+  <!--  <view class="play-wrapper" style="z-index: {{zIndex}}">
+      <view class="play" wx:if="{{songs.length > 0}}" bindtap="randomPlayall">
+        <i class="icon-play"></i>
+        <view class="text">随机播放全部</view>
+      </view>
+    </view>-->
+    <view class="filter" ref="filter"></view>
+  </view>
+  <view class="bg-layer" ref="layer" style="{{translate}}"></view>
+  <view class="scroll-wrapper">
+    <scroll-view class="list" id="musiclist" bindscroll="scroll"
+                 style="top:{{top}}px" scroll-y bindscrolltolower="getMoreSongs">
+  
+          <view class="song-list-wrapper">
+      <!-- <song-list select="selectItem" songs="{{chatMsg}}"></song-list>-->
+      <chat-msglist
+		id="chat-msglist"
+		username="{{ username }}"
+		bind:msglistTap="normalScroll"></chat-msglist>
+      </view>
+      <view class="chat-input-wrapper">
+      <chat-inputbar
+		id="chat-inputbar"
+		username="{{ username }}"
+		chatType="{{ chatType }}"
+
+		bind:newTextMsg="saveSendMsg"
+		bind:newImageMsg="saveSendMsg"
+		bind:newLocationMsg="saveSendMsg"
+		bind:newVideoMsg="saveSendMsg"
+		bind:tapSendAudio="toggleRecordModal"
+
+		bind:inputFocused="shortScroll"
+		bind:inputBlured="normalScroll"></chat-inputbar>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>

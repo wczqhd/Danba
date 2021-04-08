@@ -1,0 +1,45 @@
+
+
+.audio-player {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	transition: opacity .5s;
+}
+
+.audio-player .controls {
+	height:40rpx;
+	align-items:center;
+	display:flex;
+}
+ .baseimg
+ {
+   	height: 60rpx;
+	  width: 60rpx;
+ }
+ .giftimg
+ {
+   	height: 60rpx;
+	  width: 60rpx;
+    margin: 0 30rpx 0 30rpx;
+ }
+.audio-player .controls image {
+	height: 48rpx;
+	width: 30rpx;
+	
+}
+.audio-player .liscount {
+	font-size: 30rpx;
+	line-height: 40rpx;
+	flex: 1;
+	text-align: right;
+  margin: 0 10rpx 0 10rpx;
+
+}
+.audio-player .time {
+	font-size: 34rpx;
+	line-height: 40rpx;
+	flex: 1;
+	text-align: right;
+  margin: 0 20rpx 0 20rpx;
+}

@@ -1,0 +1,9 @@
+{
+	"component": true,
+	"usingComponents": {
+		"audio-msg": "type/audio/audio",
+			"cu-custom": "../../../lib/colorui/components/cu-custom"
+			}
+    
+	
+}

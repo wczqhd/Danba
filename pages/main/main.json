@@ -1,0 +1,13 @@
+{
+
+  "usingComponents": {
+    "modal": "../../comps/wx/m-header/m-header",
+    "header": "../../comps/wx/header/header",
+    "my-slider": "../../comps/wx/slider/slider",
+    "loading": "../../comps/wx/loading/loading",
+   
+      "audio-msg": "../../comps/chat/msglist/type/audio/audio"
+     
+    
+  }
+}

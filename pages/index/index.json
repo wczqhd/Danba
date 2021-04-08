@@ -1,0 +1,7 @@
+{"enablePullDownRefresh": true,
+"usingComponents": {
+
+"audio-msg": "../../comps/chat/msglist/type/audio/audio",
+"chat-suit-audio": "../../comps/chat/inputbar/suit/audioIndex/audioIndex"
+}
+}

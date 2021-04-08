@@ -1,0 +1,63 @@
+{
+"pages": [
+"pages/loading/loading",
+"pages/logwx/logwx",
+"pages/index/index",
+"pages/upload_info/upload_info",
+"pages/list/list",
+"pages/my/my",
+"pages/topic-detail/topic-detail"
+
+
+],
+
+"window": {
+"backgroundTextStyle": "dark",
+"navigationBarBackgroundColor": "#fff",
+"navigationBarTitleText": "蛋吧",
+"navigationBarTextStyle": "white",
+"navigationStyle": "custom"
+},
+"usingComponents": {
+"cu-custom": "/lib/colorui/components/cu-custom"
+},
+"plugins": {
+
+},
+"navigateToMiniProgramAppIdList": [
+"wx13e41a437b8a1d2e"
+],
+"tabBar": {
+"color": "#AAAAAA",
+"selectedColor": "#AAAAAA",
+"borderStyle": "black",
+"backgroundColor": "#fff",
+"position": "bottom",
+"list": [
+{
+"pagePath": "pages/index/index",
+"text": "推荐",
+"iconPath": "static/image/home-1.png",
+"selectedIconPath": "static/image/home-2.png"
+},
+{
+"pagePath": "pages/upload_info/upload_info",
+"text": "我要发布",
+"iconPath": "images/add.png",
+"selectedIconPath": "images/add.png"
+},
+{
+"pagePath": "pages/my/my",
+"text": "我",
+"iconPath": "static/image/my.png",
+"selectedIconPath": "static/image/my-1.png"
+}
+]
+},
+"sitemapLocation": "sitemap.json",
+"permission": {
+  "scope.userLocation": {
+    "desc": "用于获取本地天气信息"
+  }
+}
+}

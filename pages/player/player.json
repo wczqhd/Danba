@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "song-list": "../../comps/wx/song-list/song-list",
+    "progress-bar": "../../comps/wx/progress/progress"
+  }
+}

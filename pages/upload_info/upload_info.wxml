@@ -1,0 +1,132 @@
+<template name="audio">
+  <audio src="{{ item.url }}" controls="" autoplay="" />
+</template>
+<chat-suit-audio
+   id="chat-suit-audio"
+   username="{{ username }}"
+   chatType="{{ chatType }}"
+   bind:newAudioSimpleMsg="saveSendMsg"></chat-suit-audio>
+
+
+<!--<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">表单</view>
+</cu-custom>-->
+<!--<cu-custom bgColor="bg-blue" isBack="{{true}}"   style="padding-top:{{StatusBar}}px;height:{{CustomBar}}px"><view slot="backText">返回</view><view slot="content">发布</view></cu-custom>-->
+<cu-custom bgColor="bg-green" isCustom="{{true}}"><view slot="content">发布</view></cu-custom>
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title cuIcon-title text-orange">标题(30字)</view>
+		<input placeholder="#起个吸引人的标题"   bindinput="bindNameInput"  value="{{inputname}}" maxlength='30'></input>
+	</view>
+	
+
+	<!--<view class="cu-form-group">
+		<view class="title">验证码</view>
+		<input placeholder="#来一段语音吧,说/唱都可以"></input>
+		<button class="cu-btn bg-green shadow">录音</button>
+	</view>-->
+	<!---
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      #来一段语音吧,说/唱都可以
+    </view>
+    <view class="action">
+      {{voiceMsg.length}}/4
+    </view>
+  </view>
+  <view class="cu-form-group">
+<view class="grid col-4 grid-square flex-sub">
+      <view class="bg-img" wx:for="{{voiceMsg}}" wx:key="index"  >
+        <audio-msg  
+              wx:if="{{ item.type == 'audio' }}"
+              msg="{{ item }}" ></audio-msg>
+       
+       
+       
+        <view class="cu-tag bg-red" catchtap="removeVoice" data-index="{{index}}">
+          <text class="cuIcon-close"></text>
+        </view>
+      </view>
+      <view class="solids"  bindtap="recordVoice" wx:if="{{voiceMsg.length<4}}">
+
+        <text class="cuIcon-voicefill"></text>
+      </view>
+    </view>
+  </view>
+	-->
+	<view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text>  #说一段or唱一段，展示您曼妙的声音
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow" bindtap="recordVoice" >录音</button>
+    </view>
+  </view>
+
+<view  wx:for="{{voiceMsg}}" wx:key >
+	<view class="cu-bar bg-white ">
+ <view class="action">
+      <audio-msg  class="bg-green round"
+              wx:if="{{ item.type == 'audio' }}"
+              msg="{{ item }}" ></audio-msg>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-red shadow" bindtap="removeVoice" ><text class="cuIcon-close"></text></button>
+    </view>
+</view>
+</view>
+  <!--<view class="cu-list grid col-3 no-border">-->
+	<!--<view class="grid col-4 grid-square flex-sub">
+    <view class="bg-img " wx:for="{{voiceMsg}}" wx:key >
+     <view class="bg-green round">
+			<audio-msg  
+              wx:if="{{ item.type == 'audio' }}"
+              msg="{{ item }}" ></audio-msg>
+       
+       
+       
+        <view class="cu-tag badge bg-red" catchtap="removeVoice" data-index="{{index}}">
+          <block><text class="cuIcon-close"></text></block>
+        </view>
+				</view>
+    </view>
+  </view>-->
+
+	<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			#传一张美图，自己或别人读出上边的文字，可以让更多人看到你
+		</view>
+		<view class="action">
+			{{images.length}}/1
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{images}}" wx:key="index" bindtap="ViewImage" data-url="{{images[index]}}">
+				<image src='{{images[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="removeImage" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="chooseImage" wx:if="{{images.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+
+	<!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
+	<view class="cu-form-group margin-top">
+     <textarea maxlength="-1"   disabled="{{modalName!=null}}"    maxlength='200'  placeholder="#写下点文字，让更多人感受到你的文采"  bindinput="bindDescInput" value="{{describe}}" ></textarea>
+     <text>{{t_Deslength}}/200</text>
+	</view>
+
+  <view class="padding-xl">
+
+    <button class="cu-btn block bg-green margin-tb-sm lg"  bindtap="upload_info">
+      <text class="cuIcon-upload round"></text> 上传
+    </button>
+    
+  </view>
+
+</form>

@@ -1,0 +1,38 @@
+
+<scroll-view class="container" scroll-y>
+ <!-- <view class="search-wrapper" catchtap="toSearch">
+    <input class="search" placeholder="输入话题名搜索" placeholder-style="color: rgba(8, 222, 104, 0.815);" disabled="" placeholder-class="placeholder"/>
+    <i class="icon-search"></i>
+  </view>-->
+  <!-- <view class="slider-wrapper">
+    <my-slider parent="{{is_modal_Msg}}" slider="{{slider}}"></my-slider>
+  </view>-->
+  <view class="hot-list">
+    <view class="list-title">热门话题推荐</view>
+    <view class="rank" ref="rank">
+      <view :data="topList" class="toplist" ref="toplist">
+       
+          <view bindtap="_selectItemRank" data-data="{{item}}" class="item" wx:for="{{groupList}}"  wx:for-item="item" wx:key="{{item.roomId}}">
+         <view class="icon"  data-skuid="{{item.skuid}}"   data-turl="{{item.turl}}"    bindtap="_selectIcon">
+         
+              <image class= "img" lazy-load  src="{{item.gpImage}}"/>
+              <view class= "cut-spot">  券</view>
+              
+            </view>
+            <view class="songlist">
+               <view class="name">{{item.name}}</view>
+               <view class="song" wx:for="{{item.desList}}" > 
+                <text>{{ item }}</text>
+              
+            </view>
+           
+            </view>
+          </view>
+        
+        <view class="loading-container" wx:if="{{!groupList}}">
+          <loading></loading>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
